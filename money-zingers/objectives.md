@@ -13,3 +13,8 @@
 // if time... build route to sign in 
     - build database entry for name, desciption, share key
     
+
+// to repair the database
+
+mongod --dbpath /data/db --repair
+mongod --bind_ip=$IP --nojournal

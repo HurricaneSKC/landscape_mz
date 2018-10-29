@@ -1,19 +1,15 @@
 new fullpage('#fullpage', {
   sectionsColor: ['#f07864', '#ffffff' ,'#8b59f3', '#f8d058', '#8da1a7'],
+  anchors: ['landing','eightrules','about','weare','contact'],
   scrollOverflow: true,
-  licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE'
+  licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+  menu: '#myMenu'
 });
 
-// $("#myBtn").click(function(){
-// $("#myModal").modal({backdrop: false});
-// });
+$(".js-modal-btn").modalVideo({
+  channel:'vimeo',
+  ratio: '4:3',
+});
 
-// $("#myBtn1").click(function(){
-// $("#myModal1").modal({backdrop: false});
-// });
-
-// $("#myBtn2").click(function(){
-// $("#myModal2").modal({backdrop: false});
-// });
-
-$(".js-modal-btn").modalVideo({channel:'vimeo'});
+new needShareDropdown(document.getElementById('share-button'), {
+});

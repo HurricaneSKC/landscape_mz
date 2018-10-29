@@ -10,28 +10,33 @@
   <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/modal-video@2.4.2/css/modal-video.min.css'>
   <link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
   <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
-  
+  <link rel="stylesheet" type="text/css" href="/stylesheets/needsharebutton.min.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127560190-1"></script>
+  <script> window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-127560190-1');</script>
 </head>
 <body>
 <!--naviagtion bar-->
     <div class="container-fluid">
         <div class="navbar-header">    
             <nav class="navbar navbar-expand-lg navbar-light fixed-top backwhite">
-                <a class="navbar-brand" href="https://money-zingers-hurricaneskc.c9users.io/"><img alt="Money Zingers Logo" src="img/Money_Zingers_logo.svg" height="75%" width="75%"></a>
+                <a class="navbar-brand" href="https://money-zingers-hurricaneskc.c9users.io/"><img alt="Money Zingers Logo" src="img/Money_Zingers_logo.svg" height="80%" width="80%"></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
         
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                    <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#eightrules">8 Rules</a>
+                    <ul id="myMenu" class="navbar-nav ml-auto">
+                        <li data-menuanchor="eightrules" class="nav-item active">
+                            <a class="nav-link" href="#eightrules"><b>8 Rules</b></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
+                        <li data-menuanchor="about" class="nav-item">
+                            <a class="nav-link" href="#about"><b>About</b></a>
                         </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#weare">Landscape</a>
+                        <li data-menuanchor="weare" class="nav-item">
+                        <a class="nav-link" href="#weare"><b>Landscape</b></a>
+                        </li>
+                        <li data-menuanchor="contact" class="nav-item">
+                        <a class="nav-link" href="#contact"><b>Contact</b></a>
                         </li>
                     </ul>
                 </div>

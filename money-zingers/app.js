@@ -13,31 +13,32 @@ app.use(express.static("public"));
 
 
 // routes
-app.get('/2', function(req, res){
-    res.render("index")
-});
-
 app.get('/', function(req, res){
     res.render("index2")
 });
 
-// post email
+//Schema // MONGOOSE/MODEL CONFIG
+var emailSchema = new mongoose.Schema({
+    email: String,
+});
+
+var Email = mongoose.model("Email", emailSchema)
+
 // create route - new object POST add to db 
-// app.post('/mzemails', function(req, res){
-//     var name = req.body.name;
-//     var email = req.body.email;
+app.post('/', function(req, res){
+    var email = req.body.email;
+    var newEmail = {email: email}
+    // create new campground and save to DB
+    Email.create(newEmail, function(err, newCreate){
+        if(err){
+            res.redirect("/");
+        } else {
+            res.redirect("/");
+            // prompt("Thankyou for your email")
+        }
+    })
     
-//     var newdata = {name: name, email: email}
-//     // create new campground and save to DB
-//     NewData.create(newdata, function(err, newCreate){
-//         if(err){
-//             console.log(err)
-//         } else {
-//             res.redirect("/");
-//         }
-//     })
-    
-// });
+});
 
 
 // server load
